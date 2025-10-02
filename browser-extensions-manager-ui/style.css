@@ -1,0 +1,197 @@
+:root {
+  --neutral-900: hsl(227, 75%, 14%);
+  --neutral-800: hsl(226, 25%, 17%);
+  --neutral-700: hsl(225, 23%, 24%);
+  --neutral-600: hsl(226, 11%, 37%);
+  --neutral-300: hsl(0, 0%, 78%);
+  --neutral-200: hsl(217, 61%, 90%);
+  --neutral-100: hsl(0, 0%, 93%);
+  --neutral-0: hsl(200, 60%, 99%);
+
+  --red-400: hsl(3, 86%, 64%);
+  --red-500: hsl(3, 71%, 56%);
+  --red-700: hsl(3, 77%, 44%);
+
+  --light-gradient: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
+  --dark-gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+
+  --font-family: "Noto Sans", sans-serif;
+
+  --bg-gradient: var(--light-gradient);
+  --bg-dark: var(--neutral-300);
+  --bg: var(--neutral-100);
+  --bg-light: var(--neutral-0);
+  --text: var(--neutral-900);
+  --text-muted: var(--neutral-600);
+  --border: var(--neutral-200);
+  --shadow: var(--neutral-200);
+}
+
+.dark {
+  --bg-gradient: var(--dark-gradient);
+  --bg-dark: var(--neutral-600);
+  --bg: var(--neutral-700);
+  --bg-light: var(--neutral-800);
+  --text: var(--neutral-0);
+  --text-muted: var(--neutral-300);
+  --border: transparent;
+  --shadow: transparent;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 16px;
+  background: var(--bg-gradient);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.container {
+  margin: 10px 10vw;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-light);
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  box-shadow: 2px 2px 5px var(--shadow);
+}
+
+nav .brand {
+  display: grid;
+  place-items: center;
+}
+
+nav button {
+  margin: 6px 0;
+  padding: 6px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--bg);
+  display: grid;
+  place-items: center;
+}
+
+nav button:hover {
+  cursor: pointer;
+}
+
+.header {
+  margin-top: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  padding: 6px 12px;
+  margin: auto 4px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background-color: var(--bg-light);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.filter .active {
+  background-color: var(--red-500);
+  color: var(--neutral-0);
+}
+
+.card-container {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.card {
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 1px 1px 2px var(--shadow);
+  background-color: var(--bg-light);
+}
+
+.card .card-header {
+  display: flex;
+  gap: 15px;
+}
+
+.card .card-logo {
+  width: 100px;
+  height: 100px;
+}
+
+.card .card-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.card .card-header h3 {
+  margin: 0;
+  color: var(--text);
+}
+.card .card-header p {
+  margin: 5px 0;
+  color: var(--text-muted);
+}
+
+.card .card-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-btns input {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: var(--bg-dark);
+  outline: none;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card-btns input:checked {
+  background-color: var(--red-500);
+}
+
+.card-btns input::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  transform: scale(0.9);
+  transition: 0.3s;
+}
+
+.card-btns input:checked::before {
+  left: 20px;
+}
+
+.card-btn {
+  background-color: var(--bg);
+}
+
+@media (max-width: 375px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    margin: 5px 5vw;
+  }
+}

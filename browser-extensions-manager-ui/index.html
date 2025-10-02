@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Browser extensions manager UI</title>
+  </head>
+  <body class="container dark">
+    <nav>
+      <div class="brand">
+        <img src="./assets/images/logo.svg" alt="logo" id="logo" height="30" />
+      </div>
+      <button onclick="toggleTheme()">
+        <img
+          src="assets/images/icon-moon.svg"
+          alt="theme"
+          width="20"
+          id="theme-icon"
+        />
+      </button>
+    </nav>
+
+    <div class="header">
+      <h1 class="titel">Extensions List</h1>
+      <div class="filter">
+        <button onclick="filterData('all', this)" class="active btn">
+          All
+        </button>
+        <button onclick="filterData('active', this)" class="btn">Active</button>
+        <button onclick="filterData('inactive', this)" class="btn">
+          Inactive
+        </button>
+      </div>
+    </div>
+
+    <section class="card-container"></section>
+    <script src="index.js"></script>
+  </body>
+</html>
