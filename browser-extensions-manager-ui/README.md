@@ -29,14 +29,14 @@ Users should be able to:
 
 ### Screenshot
 
-|            light mode             |             dark mode              |
-| :-------------------------------: | :--------------------------------: |
-| ![](./screenshots/screenshot.png) | ![](./screenshots/screenshot2.png) |
+![](./screenshots/screenshot.png)
+
+![](./screenshots/screenshot2.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/bahauddinmandal/Frontend-Mentor/tree/main/browser-extensions-manager-ui)
+- Live Site URL: [https://frontend0mentor.netlify.app/](https://frontend0mentor.netlify.app/)
 
 ## My process
 
